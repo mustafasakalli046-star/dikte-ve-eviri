@@ -1,0 +1,15 @@
+# Dikte-Win bagimliliklari (Windows, Python 3.11+)
+# Visual Studio: Tools > Python > Python Environments > Install from requirements.txt
+
+sounddevice>=0.4.6
+numpy>=1.26
+keyboard>=0.13.5
+pyperclip>=1.8.2
+requests>=2.31
+pystray>=0.19.5
+Pillow>=10.0
+soundcard>=0.4.3
+
+# ffmpeg ayrica gerekli (winget install Gyan.FFmpeg), pip ile kurulmaz.
+# Yerel STT/temizlik icin whisper.cpp / llama.cpp sunuculari da ayrica
+# kurulup calistirilmalidir (bkz. README.md).

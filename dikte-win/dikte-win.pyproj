@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2f1a1a2e-6c2b-4b7a-9e3e-0f5a2f1b9c11}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>run.py</StartupFile>
+    <SearchPath>.</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>dikte-win</Name>
+    <RootNamespace>dikte-win</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="run.py" />
+    <Compile Include="dikte\__init__.py" />
+    <Compile Include="dikte\__main__.py" />
+    <Compile Include="dikte\agent.py" />
+    <Compile Include="dikte\app.py" />
+    <Compile Include="dikte\audio.py" />
+    <Compile Include="dikte\cleanup.py" />
+    <Compile Include="dikte\cli.py" />
+    <Compile Include="dikte\clipboard.py" />
+    <Compile Include="dikte\config.py" />
+    <Compile Include="dikte\filetranscribe.py" />
+    <Compile Include="dikte\hotkey.py" />
+    <Compile Include="dikte\llm.py" />
+    <Compile Include="dikte\meeting.py" />
+    <Compile Include="dikte\settings_ui.py" />
+    <Compile Include="dikte\transcribe.py" />
+    <Compile Include="dikte\translate.py" />
+    <Compile Include="dikte\tray.py" />
+    <Compile Include="dikte\vad.py" />
+    <Compile Include="dikte\worker.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
